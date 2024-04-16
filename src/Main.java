@@ -26,6 +26,8 @@ public class Main {
         for (int item : arr)
             System.out.printf(String.valueOf(item)+" ");
         System.out.println("\n####################################");
+        System.out.println("Проверка");
+        System.out.println("\n####################################");
 
     }
 }
