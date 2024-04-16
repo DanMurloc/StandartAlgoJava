@@ -51,6 +51,7 @@ public class SortingStandartClass
         }
     }
 
+    //Сортировка пузырьком по убыванию обратно
     public void RevBubbleInSort(int[] Arr)
     {
         for (int i = Arr.length-1; i>=0;i--)
@@ -62,6 +63,66 @@ public class SortingStandartClass
                     int temp = Arr[j+1];
                     Arr[j+1] = Arr[j];
                     Arr[j]=temp;
+                }
+            }
+        }
+    }
+
+    public void CocktailSort(int[] Arr)
+    {
+        int left =0;
+        int right = Arr.length-1;
+        while (left<right)
+        {
+            for (int i=left; i<right;i++)
+            {
+                if (Arr[i]>Arr[i+1])
+                {
+                    int temp = Arr[i+1];
+                    Arr[i+1] = Arr[i];
+                    Arr[i]=temp;
+                }
+            }
+            right--;
+
+            for (int i = right; i>left;i--)
+            {
+                if (Arr[i]<Arr[i-1])
+                {
+                    int temp = Arr[i-1];
+                    Arr[i-1]=Arr[i];
+                    Arr[i]=temp;
+                }
+            }
+            left++;
+        }
+    }
+
+    public void RevCocktailSort(int[] arr)
+    {
+        int right = arr.length-1;
+        int left = 0;
+
+        while (left < right)
+        {
+            for (int i = left; i<right;i++)
+            {
+                if (arr[i]<arr[i+1])
+                {
+                    int temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
+                }
+            }
+            right--;
+
+            for (int i = right; i>left; i --)
+            {
+                if (arr[i]>arr[i-1])
+                {
+                    int temp = arr[i];
+                    arr[i]=arr[i+1];
+                    arr[i+1] =temp;
                 }
             }
         }

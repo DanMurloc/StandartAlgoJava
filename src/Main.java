@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args)
@@ -26,8 +27,36 @@ public class Main {
         for (int item : arr)
             System.out.printf(String.valueOf(item)+" ");
         System.out.println("\n####################################");
-        System.out.println("Проверка");
-        System.out.println("\n####################################");
+       arr = ArrOrigin.clone();
 
+       a.CocktailSort(arr);
+       for (int item: arr)
+           System.out.printf(String.valueOf(item)+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+
+        a.RevCocktailSort(arr);
+            for (int item: arr)
+                System.out.printf(String.valueOf(item)+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+        var b = new ManipulatingAnArray<Integer>();
+        Integer[] arrI = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        b.SwappArr( arrI,0,1);
+        for (int item: arrI)
+            System.out.printf(String.valueOf(item)+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+
+        arr =b.RemoveAt(arr,3).clone();
+        for (int item: arr)
+            System.out.printf(item+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+        arr =b.RemoveAt2(arr,3).clone();
+        for (int item: arr)
+            System.out.printf(item+" ");
+        System.out.println("\n####################################");
     }
 }
+
