@@ -40,6 +40,7 @@ public  class ManipulatingAnArray<T>
 
     public  int [] RemoveAllFromIndexBack(int[] arr, int ind)
     {
+        ind++;
         int [] newArr = new int[arr.length-ind];
         for (int i = ind; i<arr.length;i++)
         {

@@ -67,6 +67,12 @@ public class Main {
         arr = b.RemoveAllFromIndexForward(arr,3);
         for (int item: arr)
             System.out.printf(item+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+        arr = b.RemoveAllFromIndexBack(arr,3);
+        for (int item: arr)
+            System.out.printf(item+" ");
+        System.out.println("\n####################################");
     }
 }
 
