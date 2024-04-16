@@ -57,6 +57,16 @@ public class Main {
         for (int item: arr)
             System.out.printf(item+" ");
         System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+        arr = b.RemoveAtFirst(arr);
+        arr = b.RemoveAtLast(arr);
+        for (int item: arr)
+            System.out.printf(item+" ");
+        System.out.println("\n####################################");
+        arr = ArrOrigin.clone();
+        arr = b.RemoveAllFromIndexForward(arr,3);
+        for (int item: arr)
+            System.out.printf(item+" ");
     }
 }
 
