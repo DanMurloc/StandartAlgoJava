@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args)
     {
+        /*
         System.out.println("Hello world");
         int[] ArrOrigin  = {8,4,7,1,2};
         int[] arr =ArrOrigin.clone();
@@ -73,6 +74,34 @@ public class Main {
         for (int item: arr)
             System.out.printf(item+" ");
         System.out.println("\n####################################");
+        int[] arrl = ArrOrigin.clone();
+
+        int m = b.MinArrayElement(arrl);
+        System.out.println("min="+m);
+        m = b.MaxArrayElement(arrl);
+        System.out.println("max="+m);
+        System.out.println("\n####################################");
+           */
+
+        int[] arrOrigin2 ={4,2,1,6,8,9,2,1,2,1,3,6,2,7,9,2,1,99,9,9,9,9};
+        int[] arring = arrOrigin2.clone();
+        ManipulatingAnArray man = new ManipulatingAnArray();
+        arring = man.ReverArr(arring);
+        for (int i:arring)
+            System.out.print(i+" ");
+        System.out.println("\n#######################################");
+        arring = arrOrigin2.clone();
+        man.swapArr(arring,0,1);
+        for(int i : arring)
+            System.out.print(i+" ");
+        System.out.println("\n#######################################");
+        arring = arrOrigin2.clone();
+        SortingStandartClass sot = new SortingStandartClass();
+        sot.InsertSort(arring);
+        for (int i : arring)
+            System.out.print(i+" ");
+        System.out.println("\n#######################################");
+
     }
 }
 

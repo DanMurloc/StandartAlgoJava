@@ -56,4 +56,49 @@ public  class ManipulatingAnArray<T>
         System.arraycopy(arr, 0, newArr, 0, ind);
         return newArr;
     }
+
+    public int MinArrayElement(int [] arr)
+    {
+        int min=arr[0];
+        for (int i=1;i<arr.length;i++)
+        {
+            if (min>arr[i])
+            {
+                min=arr[i];
+            }
+        }
+        return min;
+    }
+
+    public int MaxArrayElement(int [] arr)
+    {
+        int max = arr[0];
+        for (int i = 1 ; i< arr.length;i++)
+        {
+            if (max<arr[i])
+            {
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+
+    public int[] ReverArr(int[] arr)
+    {
+        int[] newArr = new int[arr.length];
+        int k=0;
+        for (int i = arr.length-1; i>=0;i--)
+        {
+            newArr[k] = arr[i];
+            k++;
+        }
+        return  newArr;
+    }
+
+    public void swapArr(int[] arr, int i, int k){
+        int temp= arr[k];
+        arr[k] = arr[i];
+        arr[i]= temp;
+
+    }
 }
