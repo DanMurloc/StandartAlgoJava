@@ -82,7 +82,7 @@ public class Main {
         System.out.println("max="+m);
         System.out.println("\n####################################");
            */
-
+        /*
         int[] arrOrigin2 ={4,2,1,6,8,9,2,1,2,1,3,6,2,7,9,2,1,99,9,9,9,9};
         int[] arring = arrOrigin2.clone();
         ManipulatingAnArray man = new ManipulatingAnArray();
@@ -101,7 +101,17 @@ public class Main {
         for (int i : arring)
             System.out.print(i+" ");
         System.out.println("\n#######################################");
+        */
 
+        int [] arrayOrigin = {10,45,1,111,6,55,3,9,2,12,55};
+        Serach c = new Serach();
+        int k = c.LinerSearch(arrayOrigin,5);
+        System.out.println(k+" ");
+        int[] arrayOrio = {0,1,2,3,4,5,6,7,8,9,10};
+        k = c.BinarySearch(arrayOrio,7);
+        System.out.println(k);
+        k = c.BinarySearchReq(arrayOrio,8,0,arrayOrio.length-1);
+        System.out.println(k);
     }
 }
 
