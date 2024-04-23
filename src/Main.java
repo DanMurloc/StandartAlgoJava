@@ -112,6 +112,15 @@ public class Main {
         System.out.println(k);
         k = c.BinarySearchReq(arrayOrio,8,0,arrayOrio.length-1);
         System.out.println(k);
+        SortingStandartClass sort = new SortingStandartClass();
+        arrayOrigin = sort.StalinSort(arrayOrigin);
+        for (int i: arrayOrigin)
+            System.out.print(i+" ");
+        System.out.println("########################################");
+        int [] arrrrr = {10,1,2,6,1,8,3,5,7};
+        arrrrr = sort.BogoSort(arrrrr);
+        for (int i: arrrrr)
+            System.out.print(i+" ");
     }
 }
 

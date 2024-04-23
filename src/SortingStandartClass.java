@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class SortingStandartClass
 {
     //Сортировка пузырьком
@@ -142,5 +144,39 @@ public class SortingStandartClass
             }
             arr[j] = temp;
         }
+    }
+
+    public int [] StalinSort(int[] arr){
+        ManipulatingAnArray m = new ManipulatingAnArray();
+        for (int i =0;i<arr.length-1;i++)
+        {
+            if (arr[i]>arr[i+1]){
+                arr= m.RemoveAt(arr,i+1);
+                i--;
+            }
+        }
+        return arr;
+    }
+
+    //Сортировка Йог-сарона
+    public int [] BogoSort(int[] arr)
+    {
+        boolean chek = true;
+        ManipulatingAnArray m = new ManipulatingAnArray();
+        while (chek)
+        {
+            for(int i=0; i < arr.length-1;i++){
+                if (arr[i]> arr[i+1])
+                {
+                    chek =true;
+                    arr=m.shuffleArray(arr);
+                    break;
+                }
+                if (arr[i]<arr[i+1]){
+                    chek=false;
+                }
+            }
+        }
+        return arr;
     }
 }

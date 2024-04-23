@@ -1,3 +1,5 @@
+import java.util.*;
+
 public  class ManipulatingAnArray<T>
 {
     public void SwappArr(T[] arr, int k, int l)
@@ -100,5 +102,17 @@ public  class ManipulatingAnArray<T>
         arr[k] = arr[i];
         arr[i]= temp;
 
+    }
+    public int[] shuffleArray(int[] array){
+        ArrayList<Integer>  list =  new ArrayList<>();
+        for (int i: array)
+            list.add(i);
+        Collections.shuffle(list);
+        int [] arr = new int[(int) (list.stream().count())];
+
+        for (int i = 0; i < array.length; i++) {
+            arr[i] = list.get(i);
+        }
+        return arr;
     }
 }
