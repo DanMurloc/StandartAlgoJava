@@ -140,12 +140,16 @@ public class Main {
             System.out.print(item+" ");
         }
         */
+        /*
         int [] arrayOrigin = {10,45,1,111,6,55,3,9,2,12,55};
         SortingStandartClass s = new SortingStandartClass();
         s.quickSort(arrayOrigin, 0, arrayOrigin.length-1);
         for (int item : arrayOrigin){
             System.out.print(item+" ");
         }
+        */
+        FastQuest a = new FastQuest();
+        a.CheckNumber();
     }
 }
 
