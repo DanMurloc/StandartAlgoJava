@@ -103,6 +103,7 @@ public  class ManipulatingAnArray<T>
         arr[i]= temp;
 
     }
+
     public int[] shuffleArray(int[] array){
         ArrayList<Integer>  list =  new ArrayList<>();
         for (int i: array)
@@ -114,5 +115,19 @@ public  class ManipulatingAnArray<T>
             arr[i] = list.get(i);
         }
         return arr;
+    }
+
+    public int MinEindex(int [] array, int start)
+    {
+        int minIndex = start;
+        int minValue = array[minIndex];
+        for(int i = start+1;i<array.length; i ++)
+        {
+            if(array[i]<minValue){
+                minValue = array[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
     }
 }

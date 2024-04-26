@@ -1,8 +1,9 @@
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         /*
         System.out.println("Hello world");
         int[] ArrOrigin  = {8,4,7,1,2};
@@ -102,7 +103,7 @@ public class Main {
             System.out.print(i+" ");
         System.out.println("\n#######################################");
         */
-
+        /*
         int [] arrayOrigin = {10,45,1,111,6,55,3,9,2,12,55};
         Serach c = new Serach();
         int k = c.LinerSearch(arrayOrigin,5);
@@ -121,6 +122,30 @@ public class Main {
         arrrrr = sort.BogoSort(arrrrr);
         for (int i: arrrrr)
             System.out.print(i+" ");
+        */
+        /*
+        ArrayList<File> fileList = new ArrayList<>();
+        Serach a = new Serach();
+        a.SearchFile(new File("C:\\"), fileList);
+        for (File file : fileList)
+        {
+            System.out.println(file.getAbsolutePath());
+        }
+        */
+        /*
+        int [] arrayOrigin = {10,45,1,111,6,55,3,9,2,12,55};
+        SortingStandartClass s = new SortingStandartClass();
+        arrayOrigin= s.ChoiceSorting(arrayOrigin);
+        for (int item : arrayOrigin){
+            System.out.print(item+" ");
+        }
+        */
+        int [] arrayOrigin = {10,45,1,111,6,55,3,9,2,12,55};
+        SortingStandartClass s = new SortingStandartClass();
+        s.quickSort(arrayOrigin, 0, arrayOrigin.length-1);
+        for (int item : arrayOrigin){
+            System.out.print(item+" ");
+        }
     }
 }
 

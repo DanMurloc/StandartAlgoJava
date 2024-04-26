@@ -1,3 +1,6 @@
+import java.io.File;
+import java.util.List;
+
 public class Serach {
 
     public int LinerSearch(int[] Arr, int elemetn)
@@ -44,5 +47,26 @@ public class Serach {
         else if (arr[m]>value)
             return BinarySearchReq(arr,value,lef,m-1);
         return m;
+    }
+
+    public void SearchFile(File rootFile, List<File> fileList)
+    {
+        if(rootFile.isDirectory()){
+            File[] directotyFiles = rootFile.listFiles();
+            if (directotyFiles != null){
+                for(File file : directotyFiles)
+                {
+                    if(file.isDirectory())
+                    {
+                        SearchFile(file,fileList);
+                    }
+                    else {
+                    if(file.getName().toLowerCase().endsWith(".png"));
+                    fileList.add(file);
+                    }
+                }
+            }
+        }
+
     }
 }
